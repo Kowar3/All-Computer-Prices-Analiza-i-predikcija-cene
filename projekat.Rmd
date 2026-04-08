@@ -1,7 +1,6 @@
 ---
-title: "projekat"
-author: "Bojan i Mateja"
-date: "2025-11-05"
+title: "All Computer Prices - Analiza skupa podataka i predikcija cene uređaja"
+author: "Bojan Kovarbašić"
 output: html_document
 ---
 

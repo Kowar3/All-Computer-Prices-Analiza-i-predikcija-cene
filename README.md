@@ -18,23 +18,23 @@ Korišćen je **skup podataka sa Kaggle-a** koji sadrži **100.000 uređaja**, s
 
 ## Struktura rada
 
-1. Uvod  
-2. Opis skupa podataka  
+1. Uvod
+2. Opis skupa podataka
 3. Čišćenje i obrada podataka
-4. Istraživačka analiza (EDA)    
-5. Feature engineering  
-6. Treniranje modela  
-7. Poređenje modela  
-8. Zaključak  
+4. Istraživačka analiza (EDA)
+5. Feature engineering
+6. Treniranje modela
+7. Poređenje modela
+8. Zaključak
 
 ---
 
 ## Opis skupa podataka
 
-- **Izvor**: Kaggle  
-- **Ukupan broj redova**: 100.000  
-- **Broj kolona**: 33  
-- **Ciljna promenljiva**: `price` (USD)  
+- **Izvor**: Kaggle
+- **Ukupan broj redova**: 100.000
+- **Broj kolona**: 33
+- **Ciljna promenljiva**: `price` (USD)
 
 Ovaj skup podataka sadrži tehničke specifikacije računara i laptopova, uključujući informacije o procesoru, grafičkoj kartici, memoriji, ekranu, operativnom sistemu i dodatnim karakteristikama uređaja.
 
@@ -58,6 +58,7 @@ Podaci su heterogeni: obuhvataju kako desktop računare, tako i laptopove iz raz
 U univarijantnoj analizi fokus je bio na ispitivanju **raspodele pojedinačnih promenljivih** iz skupa podataka, kako bi se stekao osnovni uvid u karakteristike uređaja.
 
 ### Ciljevi analize:
+
 - Identifikovati dominantne vrednosti i ekstreme u atributima
 - Uočiti distribuciju promenljivih
 
@@ -68,6 +69,7 @@ U univarijantnoj analizi fokus je bio na ispitivanju **raspodele pojedinačnih p
 U ovoj fazi analizirana je povezanost između **nekih pojedinačnih osobina i ciljne vrednosti `price`**, sa ciljem da se utvrdi koliko jaka je veza između njih.
 
 ### Ciljevi analize:
+
 - Oceniti kako pojedinačni atributi utiču na cenu
 - Identifikovati linearnost, stepen korelacije i grupne razlike
 - Otkriti koji prediktori imaju najjači individualni uticaj
@@ -79,6 +81,7 @@ U ovoj fazi analizirana je povezanost između **nekih pojedinačnih osobina i ci
 Nakon univarijantne i bivarijantne analize, sprovedena je i **multivarijantna analiza** sa ciljem da se uoče **kompleksne međuzavisnosti između više osobina** koje zajedno utiču na cenu uređaja.
 
 ### Ciljevi analize:
+
 - Prepoznati kombinacije osobina koje istovremeno utiču na `price`
 - Ispitati interakcije između CPU, GPU, RAM i drugih komponenti
 
@@ -139,7 +142,7 @@ Na osnovu uvida iz EDA faze, izrađene su dodatna obeležja koje bolje opisuju s
   Osmišljena da objedini ključne performanse sistema.
 
 - **`cpu_generation`**  
-  Ekstrahovana iz stringa `cpu_model`, koristi se kao ordinalni faktor. 
+  Ekstrahovana iz stringa `cpu_model`, koristi se kao ordinalni faktor.
 
 ---
 
@@ -151,15 +154,15 @@ Ovi testovi omogućavaju uvid u to **da li postoje statistički značajne razlik
 
 ### Testirani atributi:
 
-- `cpu_tier`  
-- `gpu_tier`  
+- `cpu_tier`
+- `gpu_tier`
 
 ### Rezultati:
 
-| Atribut        | p-vrednost    | Zaključak                      |
-|----------------|---------------|--------------------------------|
-| `cpu_tier`     | < 0.05        | **Vrlo značajan uticaj**       |
-| `gpu_tier`     | < 0.05        | **Vrlo značajan uticaj**       |
+| Atribut    | p-vrednost | Zaključak                |
+| ---------- | ---------- | ------------------------ |
+| `cpu_tier` | < 0.05     | **Vrlo značajan uticaj** |
+| `gpu_tier` | < 0.05     | **Vrlo značajan uticaj** |
 
 ---
 
@@ -184,16 +187,6 @@ Tokom projekta testirano je više različitih modela sa ciljem da se uporede nji
 
 ## Zaključak
 
-- Rad pokazuje da se cena računara može uspešno predvideti kombinovanjem tehničkih parametara i nekoliko dodatnih indikatora kao što su brend i godina izdavanja. 
-- Modeli su se pokazali dovoljno preciznim da se koriste za procenu cene uređaja. 
+- Rad pokazuje da se cena računara može uspešno predvideti kombinovanjem tehničkih parametara i nekoliko dodatnih indikatora kao što su brend i godina izdavanja.
+- Modeli su se pokazali dovoljno preciznim da se koriste za procenu cene uređaja.
 - Iako postoji prostor za dalja poboljšanja, ovaj projekat predstavlja kompletan i zaokružen primer primene metoda nauke o podacima na konkretan i praktičan problem.
-
----
-
-## Autori
-
-- **Bojan Kovarbašić** – 63/2022  
-- **Mateja Lapatanović** – 67/2022  
-- **Fakultet**: Prirodno-matematički fakultet – Informatika  
-- **Predmet**: Uvod u nauku o podacima  
-- **Mentor**: Prof. Branko Arsić
